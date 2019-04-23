@@ -1,4 +1,4 @@
-package eventmanagment.eventmanagment;
+package com.eventmanagment.arwest.entities;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
