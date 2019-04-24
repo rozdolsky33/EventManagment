@@ -30,6 +30,11 @@ public class Organizer extends AbstractEntity{
     }
     // Will do the additional checks to make sure that objects are not null
 
+    public Long gerResourceI(){ // include a method so that id can be serialized back/ Must br named resourceId else it wouldn't serialize
+        return id;
+
+    }
+
     @Override
     public boolean equals(Object obj) {
         return Objects.equals(id,((Organizer)obj).id); // pass in the id's of the obj that is being compared with the obj that is being passed in

@@ -1,5 +1,7 @@
 package com.eventmanagment.arwest.entities;
 
+import org.springframework.data.rest.core.annotation.RestResource;
+
 import javax.persistence.*;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -21,6 +23,7 @@ public class Event extends AbstractEntity {
     @OneToMany(mappedBy = "event", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true) // if participant is not associated with an event delete
     private Set<Participant>participants;
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @RestResource(exported = false) //create association as a part of the parent
     private Venue venue;
 
     public String getName() {
@@ -93,6 +96,11 @@ public class Event extends AbstractEntity {
 
     public void setVenue(Venue venue) {
         this.venue = venue;
+    }
+
+    public Long gerResourceI(){ // include a method so that id can be serialized back/ Must br named resourceId else it wouldn't serialize
+      return id;
+
     }
 
     // Will do the additional checks to make sure that objects are not null

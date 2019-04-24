@@ -71,6 +71,11 @@ public class Venue extends AbstractEntity {
         this.postalCode = postalCode;
     }
 
+    public Long gerResourceI(){ // include a method so that id can be serialized back/ Must br named resourceId else it wouldn't serialize
+        return id;
+
+    }
+
     // Will do the additional checks to make sure that objects are not null
 
     @Override
