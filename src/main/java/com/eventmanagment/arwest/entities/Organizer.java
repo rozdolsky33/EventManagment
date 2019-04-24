@@ -30,7 +30,7 @@ public class Organizer extends AbstractEntity{
     }
     // Will do the additional checks to make sure that objects are not null
 
-    public Long gerResourceI(){ // include a method so that id can be serialized back/ Must br named resourceId else it wouldn't serialize
+    public Long getResourceId(){ // include a method so that id can be serialized back/ Must br named resourceId else it wouldn't serialize
         return id;
 
     }

@@ -98,7 +98,7 @@ public class Event extends AbstractEntity {
         this.venue = venue;
     }
 
-    public Long gerResourceI(){ // include a method so that id can be serialized back/ Must br named resourceId else it wouldn't serialize
+    public Long getResourceId(){ // include a method so that id can be serialized back/ Must br named resourceId else it wouldn't serialize
       return id;
 
     }
