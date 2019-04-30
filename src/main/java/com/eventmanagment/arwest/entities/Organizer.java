@@ -32,9 +32,7 @@ public class Organizer extends AbstractEntity{
 
     public Long getResourceId(){ // include a method so that id can be serialized back/ Must br named resourceId else it wouldn't serialize
         return id;
-
     }
-
     @Override
     public boolean equals(Object obj) {
         return Objects.equals(id,((Organizer)obj).id); // pass in the id's of the obj that is being compared with the obj that is being passed in
